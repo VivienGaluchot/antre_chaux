@@ -13,7 +13,7 @@
 body {
     margin: 0;
     text-align: center;
-    font-family: 'Minion Pro';
+    font-family: 'Frank Ruhl Libre', serif;
     background-color: var(--color-second-background);
 }
 
@@ -45,9 +45,9 @@ h1.title {
 
 p {
     letter-spacing: .02rem;
-    line-height: 1.7rem;
     color: var(--color-dark);
     font-size: 1.15rem;
+    line-height: 1.7rem;
 }
 
 content {
@@ -65,8 +65,8 @@ content img {
     border: 1px solid var(--color-dark);
     box-sizing: border-box;
     border-radius: .2rem;
-    margin: 1rem;
-    width: calc(100% - 2 * 1rem);
+    width: 100%;
+    margin: 1rem 0;
     max-height: 15rem;
     object-fit: cover;
     box-shadow: 0 0 0 .2rem #0002;
@@ -87,7 +87,7 @@ content img {
 
 .navbar ul {
     text-align: right;
-    padding: 0;
+    padding: 0.5rem 0;
     margin: -.5rem;
 }
 
@@ -150,24 +150,22 @@ footer p {
 }
 
 .top-corner {
-    display: inline-block;
-    width: 0;
-    height: 0;
-    border-top: 1.2rem solid var(--color-accent);
-    border-right: 1.2rem solid transparent;
+    background-image: url('img/angle.svg');
+    width: 1.2rem;
+    height: 1.2rem;
     border-radius: .1rem;
     margin-bottom: -1.2rem;
 }
 
 .bottom-corner {
-    text-align: right;
     display: inline-block;
-    width: 0;
-    height: 0;
-    border-bottom: 1.2rem solid var(--color-accent);
-    border-left: 1.2rem solid transparent;
+    text-align: right;
+    background-image: url('img/angle.svg');
+    rotate: 180deg;
+    width: 1.2rem;
+    height: 1.2rem;
     border-radius: .1rem;
-    margin-top: -1.2rem;
+    vertical-align: bottom;
 }
 
 /* helpers */
