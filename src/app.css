@@ -1,10 +1,7 @@
 :root {
-    /* --color-dark: #000000;
-    --color-accent: #3d232a;
-    --color-background: #fff;
-    --color-second-background: #bcd6cc; */
     --color-dark: #0e2b2b;
     --color-muted: #729b9b;
+    --color-light: #b8c9c9;
     --color-accent: #243f3f;
     --color-background: #fff;
     --color-second-background: #c2bdb7;
@@ -25,12 +22,11 @@ body {
     width: 100%;
     display: inline-block;
     padding: 1rem;
-    width: calc(100%);
     background-color: var(--color-background);
     border: 1px solid var(--color-dark);
     box-sizing: border-box;
     border-radius: .1rem;
-    box-shadow: 0 0 0 .5rem #0002;
+    box-shadow: 0 0 0 .3rem #0002;
 }
 
 /* text */
@@ -44,7 +40,7 @@ p {
 
 content {
     display: block;
-    max-width: 800px;
+    max-width: 900px;
     margin: 1rem auto;
 }
 
@@ -74,39 +70,45 @@ content img {
 /* navbar */
 
 .navbar {
+    --navbar-el-margin: 0.2rem;
     letter-spacing: .02rem;
+    border-bottom: 1px solid var(--color-light);
+    margin-bottom: 1rem;
 }
 
 .navbar ul {
-    text-align: right;
-    margin: -.5rem;
+    text-align: center;
+    margin: calc(-1 * var(--navbar-el-margin));
+    padding: 0;
 }
 
 .navbar ul li {
     display: inline-block;
-    color: var(--color-dark);
 }
 
 .navbar ul li a {
     display: inline-block;
-    padding: .5rem;
+    margin: var(--navbar-el-margin);
+    margin-bottom: calc(var(--navbar-el-margin) - 1px);
+    padding: 0.1rem;
     text-decoration: none;
-    color: var(--color-muted);
-    border: 1px solid transparent;
-    border-radius: .2rem;
+    color: var(--color-accent);
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
 }
 
 .navbar ul li a.current {
-    text-decoration: underline;
+    font-weight: 500;
 }
 
 .navbar ul li a:focus, .navbar ul li a:hover {
-    border: 1px solid var(--color-muted);
+    border-bottom: 1px solid var(--color-dark);
 }
 
 .navbar ul li a:active {
-    color: var(--color-dark);
-    border: 1px solid var(--color-dark);
+    color: var(--color-muted);
+    border-bottom: 1px solid var(--color-muted);
+    border-top: 1px solid var(--color-muted);
 }
 
 /* footer */
@@ -147,7 +149,7 @@ footer p {
     max-width: 5rem;
     width: 80%;
     height: 0;
-    border-bottom: 1px solid var(--color-accent);
+    border-bottom: 1px solid var(--color-light);
     margin: 1rem 0;
 }
 
@@ -210,6 +212,9 @@ footer p {
     }
     .col {
         --col-margin: 1rem;
+    }
+    .navbar {
+        --navbar-el-margin: 0.2rem;
     }
 }
 
