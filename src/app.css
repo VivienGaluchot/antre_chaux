@@ -94,7 +94,6 @@ content img {
     text-decoration: none;
     color: var(--color-accent);
     border-bottom: 1px solid transparent;
-    border-top: 1px solid transparent;
 }
 
 .navbar ul li a.current {
@@ -108,7 +107,6 @@ content img {
 .navbar ul li a:active {
     color: var(--color-muted);
     border-bottom: 1px solid var(--color-muted);
-    border-top: 1px solid var(--color-muted);
 }
 
 /* footer */
