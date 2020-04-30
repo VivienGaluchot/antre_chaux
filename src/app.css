@@ -6,6 +6,7 @@
     --color-background: #fff;
     --color-second-background: #c2bdb7;
     --title-font-size: 2.7rem;
+    --col-margin: 1rem;
 }
 
 body {
@@ -21,7 +22,7 @@ body {
     text-align: initial;
     width: 100%;
     display: inline-block;
-    padding: 1rem;
+    padding: calc(2 * var(--col-margin));
     background-color: var(--color-background);
     border: 1px solid var(--color-dark);
     box-sizing: border-box;
@@ -55,7 +56,6 @@ content img {
     border-radius: .2rem;
     width: 100%;
     margin: 1rem 0;
-    max-height: 15rem;
     object-fit: cover;
     box-shadow: 0 0 0 .2rem #0002;
 }
@@ -173,15 +173,35 @@ footer p {
 /* helpers */
 
 .row {
-    box-sizing: border-box;
     width: 100%;
+    display: block;
+    font-size: 0px;
 }
 
-.col {
-    --col-margin: 1rem;
+.row .row {
+    width: calc(100% + 2 * var(--col-margin));
+    margin: 0 calc(-1 * var(--col-margin));
+}
+
+.col, .col-12, .col-6 {
+    font-size: initial;
+    display: inline-block;
     box-sizing: border-box;
+    vertical-align: top;
     margin: 0 var(--col-margin);
+    width: calc(100% - 2* var(--col-margin));
+}
+
+.col-12 {
     width: calc(100% - 2 * var(--col-margin));
+}
+
+.col-6 {
+    width: calc(50% - 2 * var(--col-margin));
+}
+
+.mh-5 {
+    max-height: 16rem;
 }
 
 .text-left {
@@ -199,25 +219,50 @@ footer p {
 /* responsives */
 
 @media screen {
-    .col {
+    :root {
         --col-margin: 2rem;
+    }
+    .col-12-lg {
+        width: calc(100% - 2 * var(--col-margin));
+    }
+    .col-6-lg {
+        width: calc(50% - 2 * var(--col-margin));
+    }
+    .mh-5-lg {
+        max-height: 16rem;
     }
 }
 
 @media screen and (max-width: 700px) {
     :root {
         --title-font-size: 2rem;
-    }
-    .col {
         --col-margin: 1rem;
     }
     .navbar {
         --navbar-el-margin: 0.2rem;
     }
+    .col-12-md {
+        width: calc(100% - 2 * var(--col-margin));
+    }
+    .col-6-md {
+        width: calc(50% - 2 * var(--col-margin));
+    }
+    .mh-5-md {
+        max-height: 16rem;
+    }
 }
 
 @media screen and (max-width: 400px) {
-    .col {
+    :root {
         --col-margin: .5rem;
+    }
+    .col-12-sm {
+        width: calc(100% - 2 * var(--col-margin));
+    }
+    .col-6-sm {
+        width: calc(50% - 2 * var(--col-margin));
+    }
+    .mh-5-sm {
+        max-height: 16rem;
     }
 }
