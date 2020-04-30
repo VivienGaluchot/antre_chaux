@@ -8,6 +8,7 @@
     --color-accent: #243f3f;
     --color-background: #fff;
     --color-second-background: #c2bdb7;
+    --title-font-size: 2.7rem;
 }
 
 body {
@@ -22,27 +23,17 @@ body {
     max-width: 1280px;
     text-align: initial;
     width: 100%;
-    /* border: 1px solid black; */
     display: inline-block;
     padding: 1rem;
     width: calc(100%);
     background-color: var(--color-background);
     border: 1px solid var(--color-dark);
     box-sizing: border-box;
-    border-radius: 0 0 .2rem .2rem;
+    border-radius: .1rem;
     box-shadow: 0 0 0 .5rem #0002;
 }
 
 /* text */
-
-h1.title {
-    color: var(--color-accent);
-    font-size: 2.7rem;
-    font-variant: small-caps;
-    letter-spacing: .1rem;
-    font-weight: 500;
-    margin: 4rem 0 1rem 0;
-}
 
 p {
     letter-spacing: .02rem;
@@ -134,10 +125,19 @@ footer p {
 
 /* custom elements */
 
+.title {
+    color: var(--color-accent);
+    font-size: var(--title-font-size);
+    font-variant: small-caps;
+    letter-spacing: .1rem;
+    font-weight: 500;
+    margin: 4rem 3rem 1rem 3rem;
+}
+
 .logo {
-    width: 3rem;
-    height: 3rem;
-    margin-left: -3rem;
+    width: var(--title-font-size);
+    height: var(--title-font-size);
+    margin-left: calc(-1 * var(--title-font-size));
     display: inline-block;
     vertical-align: baseline;
 }
@@ -178,9 +178,10 @@ footer p {
 }
 
 .col {
+    --col-margin: 1rem;
     box-sizing: border-box;
-    margin: 0 2rem;
-    width: calc(100% - 2 * 2rem);
+    margin: 0 var(--col-margin);
+    width: calc(100% - 2 * var(--col-margin));
 }
 
 .text-left {
@@ -193,4 +194,27 @@ footer p {
 
 .text-right {
     text-align: right;
+}
+
+/* responsives */
+
+@media screen {
+    .col {
+        --col-margin: 2rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    :root {
+        --title-font-size: 2rem;
+    }
+    .col {
+        --col-margin: 1rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .col {
+        --col-margin: .5rem;
+    }
 }
