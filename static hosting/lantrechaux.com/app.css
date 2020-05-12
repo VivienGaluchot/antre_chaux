@@ -9,21 +9,34 @@
     --col-margin: .8rem;
 }
 
-body {
+html, body {
     margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
     text-align: center;
     font-family: 'Frank Ruhl Libre', serif;
-    background-color: var(--color-background);
     font-weight: 400;
+    background-image: url('aaron-burden-uyJ-osS2YQI-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
+    margin: auto;
+    flex-basis: auto;
+    flex-shrink: 0;
     max-width: 1280px;
-    text-align: initial;
     width: 100%;
-    display: inline-block;
+    background-color: var(--color-background);
     padding: calc(2 * var(--col-margin));
     box-sizing: border-box;
+    border: 1px solid var(--color-accent);
 }
 
 /* text */
