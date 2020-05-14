@@ -86,22 +86,55 @@ footer .address {
 
 /* custom elements */
 
+.title-box {
+    margin: 0 3rem;
+    font-family: 'Ovo', serif;
+}
+
+.logo {
+    position: relative;
+    display: inline-block;
+    vertical-align: baseline;
+    width: 3rem;
+    margin-left: -3rem;
+    bottom: -.8rem;
+    right: 1rem;
+}
+
 .title {
+    display: inline-block;
     color: var(--color-accent);
     font-size: var(--title-font-size);
     font-variant: small-caps;
-    letter-spacing: .1rem;
     font-weight: 500;
-    font-size: 3rem;
+    font-size: 3.2rem;
     padding: 0;
-    margin: 0 3rem;
+    margin: 0;
+    letter-spacing: .1rem;
 }
 
 .subtitle {
     color: var(--color-accent);
-    letter-spacing: .1rem;
     font-size: 1.8rem;
     font-weight: 300;
+    letter-spacing: .1rem;
+}
+
+@media screen and (max-width: 700px) {
+    .logo {
+        width: 2rem;
+        margin-left: -2rem;
+        bottom: -.8rem;
+        right: 1rem;
+    }
+    .title {
+        font-size: 2rem;
+        letter-spacing: .06rem;
+    }
+    .subtitle {
+        font-size: 1.4rem;
+        letter-spacing: .06rem;
+    }
 }
 
 .mid-bar {
