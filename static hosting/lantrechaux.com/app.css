@@ -19,7 +19,7 @@ body {
     text-align: center;
     font-family: 'Frank Ruhl Libre', serif;
     font-weight: 400;
-    background-image: url('aaron-burden-uyJ-osS2YQI-unsplash.jpg');
+    background-image: url('nasa-whDrFMucHkc-unsplash.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -44,7 +44,7 @@ body {
 content {
     display: block;
     max-width: 900px;
-    margin: 3rem auto;
+    margin: 4rem auto;
 }
 
 content .wait {
@@ -116,6 +116,7 @@ footer .address {
 .subtitle {
     color: var(--color-accent);
     font-size: 1.8rem;
+    line-height: 1;
     font-weight: 300;
     letter-spacing: .1rem;
 }
