@@ -11,6 +11,18 @@
 
 /* text */
 
+h2 {
+    color: var(--color-accent);
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: .1rem;
+    margin-bottom: 1.2rem;
+}
+
+p{
+    margin-bottom: 0.6rem;
+}
+
 content {
     display: block;
     max-width: 900px;
@@ -37,17 +49,15 @@ content .wait a {
 
 footer {
     text-align: center;
-    color: var(--color-accent);
+    color: #fff;
     font-size: 1.2rem;
     font-weight: 400;
-}
-
-footer p {
-    color: var(--color-accent);
+    background-color: var(--color-accent);
+    border-radius: 0.7rem;
 }
 
 footer a {
-    color: var(--color-accent);
+    color:#fff ;
 }
 
 footer .address {
@@ -55,6 +65,17 @@ footer .address {
 }
 
 /* custom elements */
+
+.section {
+    margin-bottom: 2rem;
+}
+
+.soustitre {
+    color: dimgrey ;
+    font-weight: 300;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
 
 .title-box {
     margin: 0 3rem;
@@ -115,4 +136,9 @@ footer .address {
     height: 0;
     border-bottom: 1px solid var(--color-light);
     margin: .5rem 0;
+}
+
+.carousel-item img {
+    height: 30rem;
+    object-fit: cover;
 }
