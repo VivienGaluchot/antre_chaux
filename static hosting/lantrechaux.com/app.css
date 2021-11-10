@@ -7,43 +7,52 @@
     --color-second-background: #c2bdb7;
     --title-font-size: 2.7rem;
     --col-margin: .8rem;
+    --colour-vertf : #3b5458;
+    --colour-vertc : #99a8af;
+    --colour-grisc : #c3c8cf;
+    --colour-marronf : #b99d91;
+    --colour-marronc : #ded3cd;
+    --colour-beige : #e3e4df;
+    --colour-grisf : #a8a9ac;
+    
+}
+
+body{
+    background-color : var(--colour-beige);
+    background-image: url("Sans titre - 1.jpg");    
+    background-size:     cover;                     
+    background-repeat:   no-repeat;
+    background-position: center center;
 }
 
 /* text */
+
+h1.title{
+    font-size : 5rem;
+}
 
 h2 {
     color: var(--color-accent);
     font-size: 1.8rem;
     font-weight: 300;
     letter-spacing: .1rem;
-    margin-bottom: 1.2rem;
+}
+
+h3{
+    font-size: 1.3rem;
+    font-weight : 300;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+h3 a{
+    color:var(--colour-marronf)
 }
 
 p{
     margin-bottom: 0.6rem;
 }
 
-content {
-    display: block;
-    max-width: 900px;
-    margin: 4rem auto;
-}
-
-content .wait {
-    font-weight: 300;
-    text-align: center;
-    background: var(--color-accent);
-    color: var(--color-background);
-    letter-spacing: .02rem;
-    font-size: 1.15rem;
-    line-height: 1.7rem;
-    border-radius: .5rem;
-    padding: 1rem;
-}
-
-content .wait a {
-    color: var(--color-background);
-}
 
 /* footer */
 
@@ -52,8 +61,17 @@ footer {
     color: #fff;
     font-size: 1.2rem;
     font-weight: 400;
-    background-color: var(--color-accent);
-    border-radius: 0.7rem;
+    background-color: var(--colour-vertf);
+    padding:0.8rem;
+}
+
+footer .container{
+    background-color:var(--colour-vertf);
+    border: none;
+}
+
+footer p {
+    margin-bottom: 0.4rem;
 }
 
 footer a {
@@ -64,29 +82,68 @@ footer .address {
     font-variant: small-caps;
 }
 
+footer a:visited{
+    color:white;
+}
+
+h3 a:visited{
+    color:var(--colour-marronf);
+}
+
+a:hover{
+    color:var(--colour-vertc);
+}
+
 /* custom elements */
 
-.section {
-    margin-bottom: 2rem;
+.haut{
+    height:4rem;
+}
+
+.icon{
+    font-size: 2rem;
+    color:white;
+    margin-top:0.8rem;
+    margin-bottom:0.8rem;
+    text-align: center;
+}
+
+.paragraphe{
+    padding-top: 2rem;
+}
+
+.container {
+    background-color: white;
+    border-right: 1px solid rgb(29, 29, 29);
+    border-left:1px solid rgb(29, 29, 29);
+}
+
+.container.first {
+    border-top:1px solid rgb(29, 29, 29);
+}
+
+.section{
+    padding-bottom:2rem;
 }
 
 .soustitre {
     color: dimgrey ;
     font-weight: 300;
-    font-size: 0.9rem;
-    margin-top: 1rem;
+    font-size: 1rem;
+    margin-top: 0.8rem;
 }
 
 .title-box {
     margin: 0 3rem;
     font-family: 'Ovo', serif;
+    padding: 4rem 0rem;
 }
 
 .logo {
     position: relative;
     display: inline-block;
     vertical-align: baseline;
-    width: 3rem;
+    width: 4.2rem;
     margin-left: -3rem;
     bottom: -.8rem;
     right: 1rem;
@@ -94,7 +151,7 @@ footer .address {
 
 .title {
     display: inline-block;
-    color: var(--color-accent);
+    color: var(--colour-vertf);
     font-size: var(--title-font-size);
     font-variant: small-caps;
     font-weight: 500;
@@ -105,11 +162,15 @@ footer .address {
 }
 
 .subtitle {
-    color: var(--color-accent);
+    color: var(--colour-vertf);
     font-size: 1.8rem;
     line-height: 1;
     font-weight: 300;
     letter-spacing: .1rem;
+}
+
+.retrait{
+    margin-left:1rem;
 }
 
 @media screen and (max-width: 700px) {
@@ -138,7 +199,82 @@ footer .address {
     margin: .5rem 0;
 }
 
+.col{
+    background-color: var(--colour-vertf);
+    color:white;
+    margin:0.7rem;
+
+}
+
+.col h3{
+    font-size:1.3rem;
+    color:white;
+    font-weight: 300;
+    margin-bottom:0rem;
+    margin-top:0;
+}
+
+.mneg{
+    margin:0rem -1rem;
+}
+
+.carousel{
+    margin-top : 2rem;
+}
+
+.carousel h5 {
+    text-shadow: 0 0 3px black;
+}
+
 .carousel-item img {
     height: 30rem;
-    object-fit: cover;
+    object-fit: contain;
+
+}
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    filter: invert(1) grayscale(100);
+}
+
+.carousel-indicators [data-bs-target]{
+    width:25px;
+}
+
+.trait{
+    height: 1px;
+    background-color: var(--colour-vertf);
+    margin-left: 30px;
+    margin-right: 680px;
+    margin-bottom : 1rem;
+    margin-top: 0.8rem
+}
+
+.barre{
+    height: 1px;
+    background-color: white;
+    margin-bottom:1rem;
+    margin-top:0.5rem;
+    margin-left: 1rem;
+     margin-right:1rem;
+}
+
+.wait{
+    background-color: var(--colour-vertc);
+    border-radius: 1rem;
+    text-align: center;
+    color:black;
+    margin-top:1rem;
+    margin-bottom:1rem;
+}
+
+.wait p{
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.intcol .col p{
+    padding-bottom:1rem;
+    padding-left:1rem;
+    padding-right:1rem;
 }
