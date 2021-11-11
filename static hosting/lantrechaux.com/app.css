@@ -130,6 +130,10 @@ footer a:visited{
 
 }
 
+.col.salle p{
+    color:white;
+}
+
 .col.salle a{
     color:white;
 }
