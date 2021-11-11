@@ -40,9 +40,10 @@ h2 {
 
 h3{
     font-size: 1.3rem;
-    font-weight : 300;
+    font-weight : 400;
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 p{
@@ -100,12 +101,12 @@ footer a:visited{
 }
 
 .carousel{
-    margin-top : 2rem;
+    margin-top : 1rem;
 }
 
-.carousel-control-next-icon, .carousel-control-prev-icon {
+/* .carousel-control-next-icon, .carousel-control-prev-icon {
     filter: invert(1) grayscale(100);
-}
+} */
 
 .carousel h5 {
     text-shadow: 0 0 3px black;
@@ -116,9 +117,8 @@ footer a:visited{
 }
 
 .carousel-item img {
-    height: 30rem;
-    object-fit: contain;
-
+    height: 40rem;
+    object-fit: cover;
 }
 
 .col.salle{
