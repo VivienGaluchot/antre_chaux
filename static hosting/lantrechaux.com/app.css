@@ -19,16 +19,16 @@
 
 body{
     background-color : var(--colour-beige);
-    background-image: url("Sans titre - 1.jpg");    
+    background-image: url("Illustrations/Sans titre - 1.jpg");    
     background-size:     cover;                     
     background-repeat:   no-repeat;
-    background-position: center center;
+    background-position:top;
 }
 
 /* text */
 
 h1.title{
-    font-size : 5rem;
+    font-size : 3rem;
 }
 
 h2 {
@@ -45,29 +45,30 @@ h3{
     margin-top: 3rem;
 }
 
-h3 a{
-    color:var(--colour-marronf)
-}
-
 p{
     margin-bottom: 0.6rem;
+    color:rgb(54, 54, 54);
 }
 
+a{
+    color:var(--colour-vertf)
+}
+
+a:visited{
+    color:var(--colour-vertf)
+}
+
+a:hover{
+    color:var(--colour-vertc);
+}
 
 /* footer */
 
 footer {
     text-align: center;
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: 400;
-    background-color: var(--colour-vertf);
+    color: var(--colour-vertf);
+    font-size: 1rem;
     padding:0.8rem;
-}
-
-footer .container{
-    background-color:var(--colour-vertf);
-    border: none;
 }
 
 footer p {
@@ -75,7 +76,7 @@ footer p {
 }
 
 footer a {
-    color:#fff ;
+    color:var(--colour-vertf) ;
 }
 
 footer .address {
@@ -86,15 +87,91 @@ footer a:visited{
     color:white;
 }
 
-h3 a:visited{
-    color:var(--colour-marronf);
+
+/* custom elements */
+
+.barre{
+    height: 1px;
+    background-color: white;
+    margin-bottom:1rem;
+    margin-top:0.5rem;
+    margin-left: 1rem;
+     margin-right:1rem;
 }
 
-a:hover{
+.carousel{
+    margin-top : 2rem;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    filter: invert(1) grayscale(100);
+}
+
+.carousel h5 {
+    text-shadow: 0 0 3px black;
+}
+
+.carousel-indicators [data-bs-target]{
+    width:25px;
+}
+
+.carousel-item img {
+    height: 30rem;
+    object-fit: contain;
+
+}
+
+.col.salle{
+    background-color: var(--colour-vertf);
+    background-image: url("Illustrations/Texture\ aquarelle-01.jpg");
+    background-size: cover;
+    color:white;
+    margin:0.7rem;
+
+}
+
+.col.salle a{
+    color:white;
+}
+
+.col.salle a:visited{
+    color:white;
+}
+
+.col.salle a:hover{
     color:var(--colour-vertc);
 }
 
-/* custom elements */
+.col.salle h3{
+    font-size:1.3rem;
+    color:white;
+    font-weight: 300;
+    margin-bottom:0rem;
+    margin-top:0;
+}
+
+.container {
+    background-color: white;
+    border-right: 1px solid rgb(29, 29, 29);
+    border-left:1px solid rgb(29, 29, 29);
+}
+
+.container.first {
+    border-top:1px solid rgb(29, 29, 29);
+}
+
+.container.last {
+    border-bottom:1px solid rgb(29, 29, 29);
+    margin-bottom:3rem;
+}
+
+.container.noborder{
+    padding:0;
+}
+
+.espace{
+    padding:4rem 0;
+}
 
 .haut{
     height:4rem;
@@ -108,69 +185,21 @@ a:hover{
     text-align: center;
 }
 
-.paragraphe{
-    padding-top: 2rem;
-}
-
-.container {
-    background-color: white;
-    border-right: 1px solid rgb(29, 29, 29);
-    border-left:1px solid rgb(29, 29, 29);
-}
-
-.container.first {
-    border-top:1px solid rgb(29, 29, 29);
-}
-
-.section{
-    padding-bottom:2rem;
-}
-
-.soustitre {
-    color: dimgrey ;
-    font-weight: 300;
-    font-size: 1rem;
-    margin-top: 0.8rem;
-}
-
-.title-box {
-    margin: 0 3rem;
-    font-family: 'Ovo', serif;
-    padding: 4rem 0rem;
+.iconbis{
+    font-size:2rem;
+    padding:1rem 2rem;
+    padding-left:4rem;
+    color:rgb(54, 54, 54);
 }
 
 .logo {
     position: relative;
     display: inline-block;
     vertical-align: baseline;
-    width: 4.2rem;
+    width: 3rem;
     margin-left: -3rem;
     bottom: -.8rem;
     right: 1rem;
-}
-
-.title {
-    display: inline-block;
-    color: var(--colour-vertf);
-    font-size: var(--title-font-size);
-    font-variant: small-caps;
-    font-weight: 500;
-    font-size: 3.2rem;
-    padding: 0;
-    margin: 0;
-    letter-spacing: .1rem;
-}
-
-.subtitle {
-    color: var(--colour-vertf);
-    font-size: 1.8rem;
-    line-height: 1;
-    font-weight: 300;
-    letter-spacing: .1rem;
-}
-
-.retrait{
-    margin-left:1rem;
 }
 
 @media screen and (max-width: 700px) {
@@ -199,75 +228,96 @@ a:hover{
     margin: .5rem 0;
 }
 
-.col{
-    background-color: var(--colour-vertf);
-    color:white;
-    margin:0.7rem;
-
-}
-
-.col h3{
-    font-size:1.3rem;
-    color:white;
-    font-weight: 300;
-    margin-bottom:0rem;
-    margin-top:0;
-}
-
 .mneg{
     margin:0rem -1rem;
 }
 
-.carousel{
-    margin-top : 2rem;
+.nav-item{
+    padding: 2rem;
 }
 
-.carousel h5 {
-    text-shadow: 0 0 3px black;
+.nav-item a{
+    font-size: 1.3rem;
+    font-weight: 300;
+    color:var(--colour-vertf);
 }
 
-.carousel-item img {
-    height: 30rem;
-    object-fit: contain;
-
-}
-.carousel-control-next-icon, .carousel-control-prev-icon {
-    filter: invert(1) grayscale(100);
+.nav-item a:visited{
+    color:var(--colour-vertf);
 }
 
-.carousel-indicators [data-bs-target]{
-    width:25px;
+.nav-item a:hover{
+    color:var(--colour-vertc);
+    text-decoration:underline ;
+}
+
+.nav-link.active{
+    font-weight:500;
+}
+
+.paragraphe{
+    padding-top: 2rem;
+}
+
+.retrait{
+    margin-left:1rem;
+}
+
+.section{
+    padding-bottom:2rem;
+}
+
+.soustitre {
+    color: dimgrey ;
+    font-weight: 300;
+    font-size: 1rem;
+    margin-top: 0.8rem;
+}
+
+.spacer{
+    padding:0 0.7rem;
+}
+
+.subtitle {
+    color: var(--colour-vertf);
+    font-size: 1.8rem;
+    line-height: 1;
+    font-weight: 300;
+    letter-spacing: .1rem;
+}
+
+.title {
+    display: inline-block;
+    color: var(--colour-vertf);
+    font-size: var(--title-font-size);
+    font-variant: small-caps;
+    font-weight: 500;
+    font-size: 3.2rem;
+    padding: 0;
+    margin: 0;
+    letter-spacing: .1rem;
+}
+
+.title-box {
+    margin: 0 3rem;
+    font-family: 'Ovo', serif;
+    padding: 2rem 0rem;
 }
 
 .trait{
-    height: 1px;
+    height:1px;
     background-color: var(--colour-vertf);
-    margin-left: 30px;
-    margin-right: 680px;
-    margin-bottom : 1rem;
-    margin-top: 0.8rem
-}
-
-.barre{
-    height: 1px;
-    background-color: white;
-    margin-bottom:1rem;
-    margin-top:0.5rem;
-    margin-left: 1rem;
-     margin-right:1rem;
 }
 
 .wait{
-    background-color: var(--colour-vertc);
     border-radius: 1rem;
     text-align: center;
-    color:black;
+    color:rgb(41, 41, 41);
     margin-top:1rem;
     margin-bottom:1rem;
 }
 
 .wait p{
-    margin-top: 2rem;
     font-size: 1.4rem;
     font-weight: 500;
     opacity: 0.8;
