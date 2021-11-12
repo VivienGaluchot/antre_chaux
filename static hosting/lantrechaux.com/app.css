@@ -19,7 +19,7 @@
 
 body{
     background-color : var(--colour-beige);
-    background-image: url("Illustrations/Sans titre - 1.jpg");    
+    background-image: url("Illustrations/Gouttes_aquarelle.jpg");    
     background-size:     cover;                     
     background-repeat:   no-repeat;
     background-position:top;
@@ -117,7 +117,7 @@ footer a:visited{
 }
 
 .carousel-item img {
-    height: 40rem;
+    height: 35rem;
     object-fit: cover;
 }
 
