@@ -134,6 +134,7 @@ footer a:visited{
 
 .container.noborder{
     padding:0;
+    overflow: hidden;
 }
 
 .espace{
