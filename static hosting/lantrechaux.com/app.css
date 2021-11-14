@@ -27,10 +27,6 @@ body{
 
 /* text */
 
-h1.title{
-    font-size : 3rem;
-}
-
 h2 {
     color: var(--color-accent);
     font-size: 1.8rem;
@@ -121,39 +117,6 @@ footer a:visited{
     object-fit: cover;
 }
 
-.col.salle{
-    background-color: var(--colour-vertf);
-    background-image: url("Illustrations/Texture\ aquarelle-01.jpg");
-    background-size: cover;
-    color:white;
-    margin:0.7rem;
-
-}
-
-.col.salle p{
-    color:white;
-}
-
-.col.salle a{
-    color:white;
-}
-
-.col.salle a:visited{
-    color:white;
-}
-
-.col.salle a:hover{
-    color:var(--colour-vertc);
-}
-
-.col.salle h3{
-    font-size:1.3rem;
-    color:white;
-    font-weight: 300;
-    margin-bottom:0rem;
-    margin-top:0;
-}
-
 .container {
     background-color: white;
     border-right: 1px solid rgb(29, 29, 29);
@@ -184,15 +147,14 @@ footer a:visited{
 .icon{
     font-size: 2rem;
     color:white;
-    margin-top:0.8rem;
-    margin-bottom:0.8rem;
+    margin-top:0.6rem;
+    margin-bottom:0.6rem;
     text-align: center;
 }
 
 .iconbis{
     font-size:2rem;
     padding:1rem 2rem;
-    padding-left:4rem;
     color:rgb(54, 54, 54);
 }
 
@@ -206,23 +168,6 @@ footer a:visited{
     right: 1rem;
 }
 
-@media screen and (max-width: 700px) {
-    .logo {
-        width: 2rem;
-        margin-left: -2rem;
-        bottom: -.8rem;
-        right: 1rem;
-    }
-    .title {
-        font-size: 2rem;
-        letter-spacing: .06rem;
-    }
-    .subtitle {
-        font-size: 1.4rem;
-        letter-spacing: .06rem;
-    }
-}
-
 .mid-bar {
     display: inline-block;
     max-width: 5rem;
@@ -232,8 +177,14 @@ footer a:visited{
     margin: .5rem 0;
 }
 
-.mneg{
-    margin:0rem -1rem;
+.navbar-toggler {
+    color: rgba(0,0,0,.55);
+    border-color: rgba(0,0,0,.1);
+    margin-bottom:0.5rem;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 .nav-item{
@@ -267,6 +218,41 @@ footer a:visited{
     margin-left:1rem;
 }
 
+.salle{
+    background-color: var(--colour-vertf);
+    background-image: url("Illustrations/Texture\ aquarelle-01.jpg");
+    background-size: cover;
+    color:white;
+    height:100%;
+    padding:0.7rem;
+}
+
+.salle p{
+    color:white;
+    margin-left: 1rem;
+    margin-right:1rem;
+}
+
+.salle a{
+    color:white;
+}
+
+.salle a:visited{
+    color:white;
+}
+
+.salle a:hover{
+    color:var(--colour-vertc);
+}
+
+.salle h3{
+    font-size:1.3rem;
+    color:white;
+    font-weight: 300;
+    margin-bottom:0rem;
+    margin-top:0;
+}
+
 .section{
     padding-bottom:2rem;
 }
@@ -280,14 +266,6 @@ footer a:visited{
 
 .spacer{
     padding:0 0.7rem;
-}
-
-.subtitle {
-    color: var(--colour-vertf);
-    font-size: 1.8rem;
-    line-height: 1;
-    font-weight: 300;
-    letter-spacing: .1rem;
 }
 
 .title {
@@ -319,6 +297,7 @@ footer a:visited{
     color:rgb(41, 41, 41);
     margin-top:1rem;
     margin-bottom:1rem;
+    max-width: 80%;
 }
 
 .wait p{
@@ -332,3 +311,78 @@ footer a:visited{
     padding-left:1rem;
     padding-right:1rem;
 }
+
+
+/* version mobile */
+
+@media screen and (max-width: 700px) {
+    .logo {
+        width: 1.7rem;
+        margin-left: -2rem;
+        bottom: -.8rem;
+        right: 1rem;
+    }
+    .title {
+        font-size: 2rem;
+        letter-spacing: .06rem;
+    }
+
+
+}
+
+@media screen and (max-width: 991px) {
+    .navbar-nav{
+        background-color: rgb(247, 247, 247);
+    }
+
+    .nav-item{
+        padding: 0.2rem;
+        margin-left:3rem;
+    }
+    
+    .nav-item a{
+        font-size: 1.2rem;
+        font-weight: 300;
+        color:var(--colour-vertf);
+    }
+    
+    .nav-item a:visited{
+        color:var(--colour-vertf);
+    }
+    
+    .nav-item a:hover{
+        color:var(--colour-vertc);
+        text-decoration:underline ;
+    }
+    
+    .nav-link.active{
+        font-weight:500;
+    }
+
+    .acc-web{
+        display:none;
+    }   
+
+    .carousel-item img{
+        height:15rem;
+    }
+
+    h3{
+        font-size: 1.1rem;
+    }
+}
+
+
+@media screen and (max-width: 575px) {
+    .haut{
+        display:none;
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+    .acc-mobile{
+        display:none;
+    }  
+}
+
